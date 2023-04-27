@@ -24,19 +24,25 @@ button {
 }
 
 img{
-  display: flex;
-  flex-wrap: wrap;
-  width: 600px;
-  height: 430px;
-  padding: 10px;
+  width: 100%;
+  padding: 5%;
   
 }
 .gallery{
   list-style-type: none;
+  display: flex;
+  flex-direction: row;
+
 }
 
 @media (max-width:600px) {
-  img {
+  .gallery {
     flex: 100%;
+  }
+}
+
+@media (max-width:800px) {
+  .gallery {
+    flex: 50%;
   }
 }
