@@ -1,22 +1,21 @@
-const loginForm = document.querySelector(".login-form");
+const loginForm = document.querySelector('.login-form');
 
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Evita que la página se recargue al enviar el formulario
 
-    const emailInput = loginForm.elements.email;
-    const passwordInput = loginForm.elements.password;
+const emailInput = loginForm.elements.email;
+const passwordInput = loginForm.elements.password;
 
-    if (emailInput.value.trim() === "" || passwordInput.value.trim() === "") {
-    alert("Please fill in all fields.");
+if (!emailInput.value || !passwordInput.value) {
+    alert('Todos los campos deben ser completados');
     return;
-    }
+}
 
-    const formData = {
+const formData = {
     email: emailInput.value,
-    password: passwordInput.value,
-    };
+    password: passwordInput.value
+};
 
-    console.log(formData);
-
-    loginForm.reset();
+console.log(formData);
+loginForm.reset();
 });
