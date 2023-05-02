@@ -1,8 +1,8 @@
 const loginForm = document.querySelector('.login-form');
 
 loginForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Evita que la página se recargue al enviar el formulario
-
+    event.preventDefault(); 
+    
 const emailInput = loginForm.elements.email;
 const passwordInput = loginForm.elements.password;
 
