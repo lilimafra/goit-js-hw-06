@@ -9,7 +9,11 @@ const destroyBtn = document.querySelector('[data-destroy]');
 const boxesDiv = document.getElementById('boxes');
 
 function createBoxes(amount) {
-  let size = 30;
+  let size =
+    boxesDiv.childElementCount === 0
+  ? 10
+      : 10 + boxesDiv.childElementCount * 10;
+  console.log(boxesDiv.childElementCount);
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.style.width = size + 'px';
